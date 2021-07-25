@@ -11,7 +11,7 @@ class OS:
         if self.platform == 'windows':
             return 'windows'
         else:
-            return 'unix'
+            return 'linUni'
 
     @property
     def getArch(self) -> str:

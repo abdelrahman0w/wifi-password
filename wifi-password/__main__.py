@@ -1,6 +1,6 @@
 from .platform import OS
 from .windows.win import winPass
-from .unix.unix import unixPass
+from .linUni.linUni import linUniPass
 from .manager import Manager
 import inquirer
 
@@ -31,7 +31,7 @@ class wifiPass:
         if self.platform == 'windows':
             return winPass().getSSID()
         else:
-            return unixPass().getSSID()
+            return linUniPass().getSSID()
 
     def __getPW(self) -> str:
         if not self.auto:
@@ -40,7 +40,7 @@ class wifiPass:
         if self.platform == 'windows':
             return winPass().getPW()
         else:
-            return unixPass().getPW()
+            return linUniPass().getPW()
 
     def generateQR(self) -> None:
         Manager().generateQR(ssid=self.__getSSID(), pw=self.__getPW())

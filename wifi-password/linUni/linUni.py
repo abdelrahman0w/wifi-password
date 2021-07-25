@@ -3,7 +3,7 @@ import os
 import sys
 
 
-class unixPass:
+class linUniPass:
     def __init__(self) -> None:
         pass
 
