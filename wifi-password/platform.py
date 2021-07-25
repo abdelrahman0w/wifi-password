@@ -12,3 +12,10 @@ class OS:
             return 'windows'
         else:
             return 'unix'
+
+    @property
+    def getArch(self) -> str:
+        if self.arch == '64':
+            return '64'
+        else:
+            return '32'
